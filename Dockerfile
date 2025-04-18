@@ -32,8 +32,8 @@ COPY --from=builder /app/package-lock.json /app/package-lock.json
 RUN npm ci --omit=dev --ignore-scripts
 
 # Set environment variables for API key and custom API URL if needed
-ENV FIRECRAWL_API_KEY=your-api-key
-ENV FIRECRAWL_API_URL=https://firecrawl.your-domain.com
+ENV FIRECRAWL_API_KEY=fc-d7fed53a216a4300aa929f4dff97ed8c
+# ENV FIRECRAWL_API_URL=https://firecrawl.your-domain.com
 
 # Specify the command to run the application
 ENTRYPOINT ["node", "dist/index.js"]
