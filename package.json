@@ -21,8 +21,8 @@
     "format": "prettier --write .",
     "prepare": "npm run build",
     "publish": "npm run build && npm publish",
-    "docker:build": "docker buildx build --platform linux/amd64 -f ./Dockerfile -t asia-northeast3-docker.pkg.dev/phoz-7f0de/mayacrew/firecrawl-mcp-server:latest .",
-    "docker:push": "docker push asia-northeast3-docker.pkg.dev/phoz-7f0de/mayacrew/firecrawl-mcp-server:latest"
+    "docker:build": "pnpm run build && docker buildx build --platform linux/amd64 -f ./Dockerfile -t asia-northeast3-docker.pkg.dev/phoz-7f0de/mayacrew/firecrawl-mcp-server:sse .",
+    "docker:push": "docker push asia-northeast3-docker.pkg.dev/phoz-7f0de/mayacrew/firecrawl-mcp-server:sse"
   },
   "license": "MIT",
   "dependencies": {

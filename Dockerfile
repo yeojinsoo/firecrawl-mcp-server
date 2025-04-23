@@ -12,7 +12,7 @@ COPY package.json package-lock.json ./
 RUN npm install --ignore-scripts
 
 # Copy the rest of the application source code
-COPY . .
+COPY . . 
 
 # Build the application using TypeScript
 RUN npm run build
@@ -36,4 +36,5 @@ ENV FIRECRAWL_API_KEY=fc-d7fed53a216a4300aa929f4dff97ed8c
 # ENV FIRECRAWL_API_URL=https://firecrawl.your-domain.com
 
 # Specify the command to run the application
-ENTRYPOINT ["node", "dist/index.js"]
+ENTRYPOINT ["node", "dist/index.js", "--transport", "sse"]
+
